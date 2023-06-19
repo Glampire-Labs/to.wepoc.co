@@ -41,7 +41,7 @@ export class LoadServerPolicyViewModel extends ViewModel {
                 }
             } else {
                 this.loading = false;
-                this.message = `${this.server} does not look like a matrix homeserver.`;
+                this.message = `${this.server} does not look like a Wepoc homeserver.`;
             }
         } catch (err) {
             this.loading = false;
