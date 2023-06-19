@@ -18,35 +18,29 @@ import {Maturity, Platform, LinkKind,
     FDroidLink, AppleStoreLink, PlayStoreLink, WebsiteLink} from "../types.js";
 
 const trustedWebInstances = [
-    "app.element.io",   // first one is the default one
-    "develop.element.io",
-    "chat.fedoraproject.org",
-    "chat.fosdem.org",
-    "chat.mozilla.org",
-    "webchat.kde.org",
-    "app.gitter.im",
+    "web.wepoc.co"  // first one is the default one
 ];
 
 /**
  * Information on how to deep link to a given matrix client.
  */
 export class Element {
-    get id() { return "element.io"; }
+    get id() { return "wepoc.co"; }
 
     get platforms() {
         return [
-            Platform.Android, Platform.iOS,
-            Platform.Windows, Platform.macOS, Platform.Linux,
+            Platform.iOS,
             Platform.DesktopWeb
+            //, Platform.Android
         ];
     }
 
-    get icon() { return "images/client-icons/element.svg"; }
-    get appleAssociatedAppId() { return "7J4U792NQT.im.vector.app"; }
-    get name() {return "Element"; }
-    get description() { return 'Fully-featured Matrix client, used by millions.'; }
-    get homepage() { return "https://element.io"; }
-    get author() { return "Element"; }
+    get icon() { return "images/client-icons/wepoc.png"; }
+    get appleAssociatedAppId() { return "649RMX27J7.com.wepoc2.app"; }
+    get name() {return "Wepoc"; }
+    get description() { return 'Our Official App, used by millions.'; }
+    get homepage() { return "https://wepoc.co"; }
+    get author() { return "Wepoc"; }
     getMaturity(platform) { return Maturity.Stable; }
 
     getDeepLink(platform, link) {
@@ -90,7 +84,7 @@ export class Element {
     getCopyString(platform, link) {}
     getInstallLinks(platform) {
         switch (platform) {
-            case Platform.iOS: return [new AppleStoreLink('vector', 'id1083446067')];
+            case Platform.iOS: return [new AppleStoreLink('Wepoc', 'id6450281997')];
             case Platform.Android: return [new PlayStoreLink('im.vector.app'), new FDroidLink('im.vector.app')];
             default: return [new WebsiteLink("https://element.io/download")];
         }

@@ -21,11 +21,11 @@ export class DisclaimerView extends TemplateView {
         return t.div({ className: "DisclaimerView card" }, [
             t.h1("Disclaimer"),
             t.p(
-                'Matrix.to is a service provided by the Matrix.org Foundation ' +
-                'which allows you to easily create invites to Matrix rooms and accounts, ' +
-                'regardless of your Matrix homeserver. The service is provided "as is" without ' +
+                'to.Wepoc.co is a service provided by Wepoc' +
+                'which allows you to easily create invites to Wepoc rooms and accounts, ' +
+                'The service is provided "as is" without ' +
                 'warranty of any kind, either express, implied, statutory or otherwise. ' +
-                'The Matrix.org Foundation shall not be responsible or liable for the room ' +
+                'Wepoc shall not be responsible or liable for the room ' +
                 'and account contents shared via this service.'
             ),
         ]);
